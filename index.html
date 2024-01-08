@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viewer</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="pdfViewer"></div>
+    <div id="word-container"></div>
+    <div>
+        <div>
+            <div>
+                <header>
+                    <h1>Your Name</h1>
+                </header>
+
+                <nav>
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#contact">Contact</a>
+                    <button onclick="preview('pdf')">
+                        Open PDF
+                    </button>
+                    <button onclick="preview('doc')">Open Doc</button>
+                    <button onclick="preview('docx')">Open Docx</button>
+                </nav>
+
+                <section id="home">
+                    <h2>Welcome to My Portfolio</h2>
+                    <p>Showcasing my work and passion for creating amazing things.</p>
+                </section>
+
+                <section id="about">
+                    <h2>About Me</h2>
+                    <p>I am a passionate web developer with a focus on creating user-friendly and visually appealing
+                        websites.</p>
+                </section>
+
+                <section id="portfolio">
+                    <h2>Portfolio</h2>
+                    <div classname="portfolio-item">
+                        <img src="https://via.placeholder.com/400x300" alt="Project 1" />
+                        <p>Project 1 - Description goes here.</p>
+                    </div>
+
+                    <div classname="portfolio-item">
+                        <img src="https://via.placeholder.com/400x300" alt="Project 2" />
+                        <p>Project 2 - Description goes here.</p>
+                    </div>
+
+                    <div classname="portfolio-item">
+                        <img src="https://via.placeholder.com/400x300" alt="Project 3" />
+                        <p>Project 3 - Description goes here.</p>
+                    </div>
+                </section>
+
+                <section id="contact">
+                    <h2>Contact Me</h2>
+                    <p>Feel free to reach out for collaboration, questions, or just to say hello!</p>
+                </section>
+
+                <footer>
+                    <p>&copy; 2023 Your Name. All rights reserved.</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <div id="docxViewerContainer">
+        <iframe class="docx" id="docx"
+            src="https://docs.google.com/gview?url=https://simple-invoke-app.vercel.app/document.docx&embedded=true"
+            width="100%" height="100%"></iframe>
+        <div id="redirectButton" class="viewerButtons marginRight" onclick="redirect()">Create RfE Log</div>
+        <div id="closePdfButton" class="viewerButtons" onclick="closeViewer()">&times;</div>
+    </div>
+    <div id="docViewerContainer">
+        <iframe class="doc" id="doc"
+            src="https://docs.google.com/gview?url=https://simple-invoke-app.vercel.app/document.doc&embedded=true"
+            width="100%" height="100%"></iframe>
+        <div id="redirectButton" class="viewerButtons marginRight" onclick="redirect()">Create RfE Log</div>
+        <div id="closePdfButton" class="viewerButtons" onclick="closeViewer()">&times;</div>
+    </div>
+    <div id="pdfViewerContainer">
+        <iframe class="pdf" id="pdf"
+            src="https://docs.google.com/gview?url=https://simple-invoke-app.vercel.app/demopdf.pdf&embedded=true"
+            width="100%" height="100%"></iframe>
+        <div id="redirectButton" class="viewerButtons marginRight" onclick="redirect()">Create RfE Log</div>
+        <div id="closePdfButton" class="viewerButtons" onclick="closeViewer()">&times;</div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
